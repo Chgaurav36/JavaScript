@@ -6,7 +6,7 @@ let cpu = ["S" , "P" , "C"][cpui]
 
 const match = (cpu,user) =>{
     if(cpu===user){
-        return "Tied"
+        return "TieD"
     }
     else if(cpu == "S" && user == "P"){
         return "Computer wins"
