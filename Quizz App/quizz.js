@@ -105,7 +105,10 @@ submit.addEventListener("click" , () =>{
         if(currentQuiz < quizData.length ){
             loadQuiz();
         }else{
-            quiz.innerHTML = `<h1>You have scored ${score}/${quizData.length} answers</h1>`
+            quiz.innerHTML = `<h1>You have scored ${score}/${quizData.length} answers</h1>
+            <button id = "submit" onclick="location.reload()">Reload</button>`;
+
+
         }
     }
 })
