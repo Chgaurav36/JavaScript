@@ -89,8 +89,11 @@ const spin = () => {
 
 
 // Converting the reel function  output 
-// from [[A,D,C],[C,B,A],[C,D,C]] to
-// [[A,C,C],[D,B,D],[C,A,C]]
+// [ [ 'B', 'D', 'C' ], [ 'B', 'D', 'D' ], [ 'B', 'A', 'D' ] ]
+// to
+// [ [ 'B', 'B', 'B' ], [ 'D', 'D', 'A' ], [ 'C', 'D', 'D' ] ]
+
+
 const transpose = (reels) => {
   const rows = [];
 
@@ -102,6 +105,15 @@ const transpose = (reels) => {
   }
   return rows;
 };
+
+// Converting from this 
+//[ [ 'B', 'B', 'B' ], [ 'D', 'D', 'A' ], [ 'C', 'D', 'D' ] ]
+
+// to this
+//                B | B | B
+//                D | D | A
+//                C | D | D
+
 
 const printRows = (rows) => {
     for (const row of rows) {
@@ -120,7 +132,9 @@ const balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
 const reel = spin();
+console.log(reel);
 const row = transpose(reel);
+console.log(row);
 const rows = printRows(row);
 console.log(rows);
 
