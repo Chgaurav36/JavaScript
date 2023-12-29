@@ -126,7 +126,9 @@ const printRows = (rows) => {
         }
         console.log(rowString);
     }
-}
+};
+
+
 
 const balance = deposit();
 const numberOfLines = getNumberOfLines();
